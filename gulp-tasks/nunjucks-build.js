@@ -3,6 +3,9 @@ var nunjucksRender = require('gulp-nunjucks-render');
 module.exports = function (gulp, plugins) {
     return function () {
        gulp.src('app/**/*.+(html|nunjucks)')
+       .pipe(data({
+           gal1: require("../app/gallery1.json")
+       }))
       .pipe(nunjucksRender({
            path: ['app/templates']
         }))
