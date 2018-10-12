@@ -1,4 +1,5 @@
 var nunjucksRender = require('gulp-nunjucks-render');
+var data = require("gulp-data");
 
 module.exports = function (gulp, plugins) {
     return function () {
